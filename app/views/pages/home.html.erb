@@ -1,0 +1,19 @@
+<% if signed_in? %>
+  <table class="front" summary="for logged in user">
+    <tr>
+      <td class="main">
+        <h1 class="macropost">Tabs should go here once implemented</h1>
+        <%= render 'shared/macropost_form' %>
+        <%= render 'shared/feed' %>
+      </td>
+      <td class="sidebar round">
+        <%= render 'shared/user_info' %>
+      </td>
+    </tr>
+  </table>
+<% else %>
+  <div class="largelogo">
+    <%= pic_scroll %>
+  </div>
+  <%= link_to "See what we're up to!" , updates_path , :class => "signup_button round" , :title => "updates" %>
+<% end %>

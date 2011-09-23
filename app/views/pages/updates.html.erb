@@ -1,0 +1,19 @@
+<h1>Updates</h1>
+<% if signed_in? %>
+  <table class="front" summary="for logged in user">
+    <tr>
+      <td class="main">
+        <h2 class="macropost">Write Here!</h2>
+        <%= render 'shared/macropost_form' %>
+        <%= render 'shared/feed' %>
+      </td>
+      <td class="sidebar round">
+        <%= render 'shared/user_info' %>
+      </td>
+    </tr>
+  </table>
+<% else %>
+  <td class="main">
+    <%= render 'shared/feed' %>
+  </td>
+<% end %>
